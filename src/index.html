@@ -5,22 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>TennisMeet</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header>
+      <a href="index.html"><img src="./assets/images/ball_logo.png" alt="TennisMeet"></a>
+      <div class="menu">
+        <a href="./participantes.html"><h3>Participantes</h3></a>
+        <a href="./info.html"><h3>Información</h3></a>
+        <a href="./format.html"><h3>Contacto</h3></a>
+      </div>
+    </header>
+    <main class="main-index">
+      <ul>
+        <li class="grid-title">
+          <h1>TennisMeet</h1>
+          <h2>Encuentra, chatea, queda y juega!</h2>
+        </li>
+        <li class="grid-connect">
+          <h2>Conecta con otros jugadores</h2>
+          <p>Hay muchos jugadores en nuestra app esperando para jugar contigo!</p>
+        </li>
+        <li class="grid-ranking">
+          <h2>Contempla tu evolución</h2>
+          <p>El sistema de ELO te permite ver tu mejora partido a partido</p>
+        </li>
+        <li class="grid-event">
+          <h2>Torneo anual</h2>
+          <p>Un torneo abierto para todos los usuarios y dividido por niveles</p>
+        </li>
+        <li class="grid-court">
+          <h2>Pistas mas cerca</h2>
+          <p>Encuentra la pista mas cercanas al mejor precio</p>
+        </li>
+      </ul>
+    </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

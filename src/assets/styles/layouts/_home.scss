@@ -7,7 +7,6 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -51,7 +50,360 @@ body {
 }
 
 .uoc-footer {
-  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   font-size: 0.75rem;
   text-align: center;
+  background-color: #fff;
+  border-top: 1px solid $uoc-corporate;
+
+  .footer-logo{
+    align-self: center;
+    margin: 10px;
+    img{
+      max-width: 50px;
+      height: auto;
+    }
+  }
+
+  .footer-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    a{
+      margin: 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 100%;
+  height: fit-content;
+  padding: 10px;
+  font-family: $font-family-sans-serif;
+  color: $uoc-corporate;
+  border-bottom: 1px solid $uoc-corporate;
+
+  a{
+    align-self: center;
+    text-decoration: none;
+
+    img{
+      max-width: 50px;
+      height: auto;
+    }
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    a{
+      margin: 10px;
+    }
+  }
+}
+
+.main-index{
+  display: flex;
+  flex-direction: column;
+  background-image: url(/src/assets/images/tennis_bg.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 850px;
+  container-type: inline-size;
+  container-name: i-main;
+
+  li{
+    width: 200px;
+    float: left;
+    margin: 10px;
+  }
+}
+
+.main-p{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  container-type: inline-size;
+  container-name: p-main;
+
+  .p-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: auto;
+    justify-content: center;
+    
+    .p-title{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 1000px;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .p-player{
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      max-width: 400px;
+      padding: 20px;
+      margin: 40px;
+      text-align: center;
+      background-color: rgba($uoc-masterbrand, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0px 10px 10px 0px black;
+
+      img{
+        max-width: 100px;
+        height: auto;
+        align-self: center;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+@layer i-base{
+  .main-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    container-type: inline-size;
+    container-name: info-main;
+
+    .info-container{
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+    }
+
+    .info-container:has(.title-1){
+      width: 75%;
+      max-width: 1200px;
+      justify-content: center;
+
+      h1{
+        min-width: 30%;
+        margin-right: 10px;
+      }
+    }
+
+    .info-container:has(.court-img){
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      width: 80%;
+      justify-content: center;
+
+      .court-img{
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 1rem;
+      }
+    }
+
+    .info-container:has(.rule-list){
+      width: 80%;
+      max-width: 800px;
+      border-top: solid 1px $uoc-corporate;
+      border-bottom: solid 1px $uoc-corporate;
+
+      .rule-title{
+        font-size: 18px;
+        font-weight: bold;
+
+        .rule-text{
+          font-size: 14px;
+          font-weight: normal;
+          list-style: none;
+        }
+      }
+    }
+    .info-container:has(.side-text){
+      flex-direction: row;
+      justify-content: center;
+
+      .side-text{
+        width: 30%;
+        max-width: 400px;
+        margin-right: 50px;
+      }
+
+      .text-img{
+        width: 30%;
+        max-width: 600px;
+        height: auto;
+        align-self: baseline;
+        border-radius: 1rem;
+      }
+    }
+
+    .info-container:has(blockquote){
+      justify-content: center;
+      flex-direction: column;
+
+      blockquote{
+        width: 90%;
+        max-width: 800px;
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      h2{
+        align-self: flex-end;
+      }
+    }
+    .info-container:is(h1){
+      font-weight: bold;
+    }
+  }
+}
+
+@layer i-utility{
+  .info-container{
+    padding: 20px;
+  }
+}
+
+@layer f-base{
+  .main-form{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    container-type: inline-size;
+    container-name: form-main;
+    min-height: 90%;
+
+    form{
+      width: 75%;
+      max-width: 1200px;
+      background-color: #707070;
+      border: #101010 2px solid;
+      border-radius: 1rem;
+    }
+
+    .form-select{
+      width: 15%;
+      max-width: 250px;
+    }
+  }
+}
+
+@layer f-utility{
+  form{
+    padding: 20px;
+  }
+}
+
+@container p-main (max-width: 720px){
+  .main-p{
+
+    .p-container{
+      flex-direction: column;
+
+      .p-player{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@container info-main (max-width: 720px){
+  .info-container{
+    flex-direction: column;
+  }
+
+  .info-container:has(.side-text){
+    justify-content: flex-start;
+
+    .side-text{
+      width: 50%;
+    }
+
+    .text-img{
+      width: 50%;
+      align-self: flex-start;
+    }
+  }
+}
+
+@supports (display: grid){
+  .main-index{
+
+    ul{
+      display: grid;
+      grid-template-columns: repeat(5, 16vw);
+      grid-template-rows: repeat(4, 10vw);
+      grid-gap: 1vw;
+      list-style-type: none;
+  
+      li{
+        width: auto;
+        margin: 0;
+        background-color: rgba($uoc-masterbrand, 0.5);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+  
+      .grid-title{
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        align-self: center;
+      }
+  
+      .grid-connect{
+        grid-column: 4 / 6;
+        grid-row: 2 / 3;
+        align-self: center;
+      }
+  
+      .grid-ranking{
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+        align-self: center;
+      }
+  
+      .grid-event{
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        align-self: center;
+      }
+  
+      .grid-court{
+        grid-column: 4 / 6;
+        grid-row: 4 / 5;
+        align-self: center;
+      }
+    }
+  }
+
+  @container i-main (max-width: 1280px){
+    .main-index{
+
+      ul{
+        display: inline-flex;
+        flex-direction: column;
+        margin: 10px;
+      }
+    }
+  }
 }
